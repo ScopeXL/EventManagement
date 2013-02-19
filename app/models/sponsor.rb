@@ -7,5 +7,5 @@ class Sponsor < ActiveRecord::Base
   
   has_one :exhibitor
   has_and_belongs_to_many :meetings
-  
+  belongs_to :contest
 end
