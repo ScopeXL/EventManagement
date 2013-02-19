@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventmanager</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="header">
+        <div id="banner"></div>
+        <div id="navigation">
+            <%= link_to "Home", meetings_path, :id => "first", :class => "navItem" %>
+            <%= link_to "Exhibitors", exhibitors_path, :class => "navItem" %>
+            <%= link_to "Meetings", meetings_path, :class => "navItem" %>
+            <%= link_to "Venues", venues_path, :class => "navItem" %>
+            <%= link_to "Exhibitor Categories", exhibitor_categories_path, :class => "navItem" %>
+
+        </div>
+    </div>
+
+<%= yield %>
+
+    <div id="footer">
+        <hr />
+        Copyright &copy; 2013 Event Management System, Inc.
+    </div>
+</body>
+</html>
